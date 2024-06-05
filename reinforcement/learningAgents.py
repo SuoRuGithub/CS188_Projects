@@ -18,7 +18,7 @@ import random,util,time
 
 class ValueEstimationAgent(Agent):
     """
-     Abstract agent which assigns values to (state,action)
+      Abstract agent which assigns values to (state,action)
       Q-Values for an environment. As well as a value to a
       state and a policy given respectively by,
 

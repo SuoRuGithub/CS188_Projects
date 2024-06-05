@@ -23,7 +23,7 @@ q_values_k_0_action_west: """
 """
 
 values_k_1: """
-           10.0000       0.0000       0.0000
+            0.0000       0.0000       0.0000
 """
 
 q_values_k_1_action_north: """
@@ -43,11 +43,11 @@ q_values_k_1_action_south: """
 """
 
 q_values_k_1_action_west: """
-           illegal       5.0000      illegal
+           illegal       0.0000      illegal
 """
 
 values_k_2: """
-           10.0000       0.0000     -10.0000
+           10.0000       0.0000       0.0000
 """
 
 q_values_k_2_action_north: """
@@ -55,7 +55,7 @@ q_values_k_2_action_north: """
 """
 
 q_values_k_2_action_east: """
-           illegal      -5.0000      illegal
+           illegal       0.0000      illegal
 """
 
 q_values_k_2_action_exit: """
@@ -71,7 +71,7 @@ q_values_k_2_action_west: """
 """
 
 values_k_3: """
-           10.0000       5.0000     -10.0000
+           10.0000       5.0000       0.0000
 """
 
 q_values_k_3_action_north: """
@@ -79,7 +79,7 @@ q_values_k_3_action_north: """
 """
 
 q_values_k_3_action_east: """
-           illegal      -5.0000      illegal
+           illegal       0.0000      illegal
 """
 
 q_values_k_3_action_exit: """

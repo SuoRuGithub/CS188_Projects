@@ -21,44 +21,41 @@
 
 def question2():
     answerDiscount = 0.9
-    answerNoise = 0.005
+    answerNoise = 0.2
     return answerDiscount, answerNoise
 
 def question3a():
-    # discount小，倾向于短路；noise小，倾向于走悬崖（？），
-    answerDiscount = 0.1
-    answerNoise = 0
-    answerLivingReward = 0
+    answerDiscount = None
+    answerNoise = None
+    answerLivingReward = None
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
-    # 为什么会是这样？
-    answerDiscount = 0.2
-    answerNoise = 0.2
-    answerLivingReward = 0.1
+    answerDiscount = None
+    answerNoise = None
+    answerLivingReward = None
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
-    answerDiscount = 0.5
-    answerNoise = 0
-    answerLivingReward = 0
+    answerDiscount = None
+    answerNoise = None
+    answerLivingReward = None
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
-    answerDiscount = 1
-    answerNoise = 0.5
-    answerLivingReward = 0
+    answerDiscount = None
+    answerNoise = None
+    answerLivingReward = None
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
-    # 永不折扣，永不失误——活着就是一切！
-    answerDiscount = 1
-    answerNoise = 0
-    answerLivingReward = 20
+    answerDiscount = None
+    answerNoise = None
+    answerLivingReward = None
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 

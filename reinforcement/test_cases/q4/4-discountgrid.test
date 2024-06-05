@@ -1,4 +1,4 @@
-class: "PrioritizedSweepingValueIterationTest"
+class: "AsynchronousValueIterationTest"
 
 # GridWorld specification
 #    _ is empty space
@@ -21,6 +21,5 @@ learningRate: "0.1"
 numExperiences: "3000"
 valueIterations: "1000"
 iterations: "10000"
-
 
 

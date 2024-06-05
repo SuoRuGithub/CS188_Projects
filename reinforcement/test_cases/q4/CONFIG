@@ -1,3 +1,2 @@
-class: "ExtraCreditPassAllTestsQuestion"
-max_points: "0"
-extra_points: "1"
+max_points: "1"
+class: "PassAllTestsQuestion"

@@ -1,4 +1,4 @@
-class: "QLearningTest"
+class: "PrioritizedSweepingValueIterationTest"
 
 # GridWorld specification
 #    _ is empty space
@@ -7,9 +7,7 @@ class: "QLearningTest"
 #    S is a start state
 #
 grid: """
-  -10
-    S
-   10
+   10    S  -10
 """
 discount: "0.75"
 noise: "0.25"
@@ -17,6 +15,7 @@ livingReward: "0.0"
 epsilon: "0.5"
 learningRate: "0.1"
 numExperiences: "100"
-valueIterations: "100"
+valueIterations: "1000"
 iterations: "10000"
+
 
