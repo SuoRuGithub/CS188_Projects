@@ -112,10 +112,10 @@ class QLearningAgent(ReinforcementAgent):
         "*** YOUR CODE HERE ***"
         # 这个函数里，我们需要对每一个状态选择策略，但是需要一定的随机性
 
-
-        if util.flipCoin(self.epsolon):
-            legalActions = legalActions.remove(action)
-            print(legalActions)
+        
+        if util.flipCoin(self.epsilon):
+            # legalActions = legalActions.remove(action)
+            # print(legalActions)
             action = random.choice(legalActions)      
         else:
             action = self.computeActionFromQValues(state)
@@ -188,7 +188,7 @@ class ApproximateQAgent(PacmanQAgent):
        should work as is.
     """
     def __init__(self, extractor='IdentityExtractor', **args):
-        self.featExtractor = util.lookup(extractor, globals())()
+        self.featExtractor = util.lookup(extractor, globals())()    # lookup这个函数在所有导入的模块查找需要的函数，在这里我们查找的是extrector
         PacmanQAgent.__init__(self, **args)
         self.weights = util.Counter()
 
@@ -201,14 +201,27 @@ class ApproximateQAgent(PacmanQAgent):
           where * is the dotProduct operator
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        features = self.featExtractor.getFeatures(state, action)
+        print(features)
+        weights = self.weights
+        QValue = features * weights # Counter重载了*，可以直接做内积
+        return QValue
+        # util.raiseNotDefined()
 
     def update(self, state, action, nextState, reward):
         """
            Should update your weights based on transition
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        difference = (reward + self.discount * self.computeValueFromQValues(nextState)) - self.getQValue(state, action)
+        # 更新参数 w_i <- w_i + alpha * difference * f_i
+        # 首先要对每一个f都乘以aplha * difference
+        features = self.featExtractor.getFeatures(state, action)
+        for key in list(features.keys()):
+            features[key] = features[key] * self.alpha * difference
+        self.weights = self.weights + features  # 重载了写起来就是舒服
+
+        # util.raiseNotDefined()
 
     def final(self, state):
         "Called at the end of each game."
